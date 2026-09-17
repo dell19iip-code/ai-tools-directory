@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern directory of useful AI tools." />
+  <title>AI Atlas — AI Tools Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">
+      <span class="brand-mark">✦</span>
+      <span>AI Atlas</span>
+    </a>
+    <nav>
+      <a href="#tools">Explore</a>
+      <a href="#categories">Categories</a>
+      <a href="#submit">Submit a tool</a>
+    </nav>
+    <button class="header-btn" onclick="document.querySelector('#tools').scrollIntoView({behavior:'smooth'})">Explore tools</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span></span> Curated AI tools, all in one place</div>
+      <h1>Find the right AI tool<br><em>for your next idea.</em></h1>
+      <p class="hero-copy">Discover practical AI tools for writing, design, coding, productivity, video, research and more.</p>
+
+      <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search tools, categories, or use cases..." autocomplete="off" />
+        <kbd>⌘ K</kbd>
+      </div>
+
+      <div class="quick-links" id="categories">
+        <span>Popular:</span>
+        <button data-category="Writing">Writing</button>
+        <button data-category="Design">Design</button>
+        <button data-category="Coding">Coding</button>
+        <button data-category="Video">Video</button>
+        <button data-category="Productivity">Productivity</button>
+      </div>
+    </section>
+
+    <section class="directory" id="tools">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">THE DIRECTORY</p>
+          <h2>Explore AI tools</h2>
+        </div>
+        <div class="controls">
+          <span id="resultCount"></span>
+          <select id="sortSelect" aria-label="Sort tools">
+            <option value="featured">Featured</option>
+            <option value="az">A → Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filters" id="filterBar"></div>
+      <div class="tool-grid" id="toolGrid"></div>
+      <div class="empty" id="emptyState" hidden>
+        <div class="empty-icon">⌁</div>
+        <h3>No tools found</h3>
+        <p>Try another search or category.</p>
+        <button onclick="clearFilters()">Clear filters</button>
+      </div>
+    </section>
+
+    <section class="submit-section" id="submit">
+      <div>
+        <p class="section-kicker">HAVE A TOOL?</p>
+        <h2>Put your AI product<br>in front of curious people.</h2>
+      </div>
+      <a class="primary-btn" href="mailto:hello@example.com?subject=Submit%20an%20AI%20tool">Submit a tool <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 AI Atlas</span>
+    <span>Built for people exploring what AI can do.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
